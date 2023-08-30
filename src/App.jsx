@@ -28,11 +28,12 @@ function App() {
     { value: "jogging", label: "วิ่งจ็อกกิ้ง" },
   ];
 
-  let shaking = {
-    x: 0,
-    y: 0,
-    z: 0,
-  };
+  let shaking =
+    {
+      x: 0,
+      y: 0,
+      z: 0,
+    } | undefined;
 
   useEffect(() => {
     const hypot = Math.hypot(motion1.x, motion1.y, motion1.z);
