@@ -36,7 +36,7 @@ function App() {
 
   useEffect(() => {
     const hypot = Math.hypot(motion1.x, motion1.y, motion1.z);
-
+    console.log(hypot);
     if (hypot > 30) {
       if (shaking) {
         const [a, b, c] = normalize(motion1.x, motion1.y, motion1.z);
