@@ -3,6 +3,11 @@ import { getMobileOperatingSystem } from "../utils/getMobileOperatingSystem";
 import ExerciseSelector from "../components/ExerciseSelector";
 import "./App.css";
 
+function normalize(x, y, z) {
+  const len = Math.hypot(x, y, z);
+  return [x / len, y / len, z / len];
+}
+
 function App() {
   const [motion1, setMotion1] = useState({
     x: 0,
