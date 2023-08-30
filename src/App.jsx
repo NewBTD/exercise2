@@ -46,6 +46,7 @@ function App() {
         if (Math.abs(a * d + b * e + c * f) < 0.3) {
           shaking = undefined;
         }
+        setCount(count + 1);
       }
       if (!shaking) {
         shaking = {
