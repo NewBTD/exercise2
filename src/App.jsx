@@ -36,9 +36,10 @@ function App() {
 
   useEffect(() => {
     const hypot = Math.hypot(motion1.x, motion1.y, motion1.z);
-    console.log(hypot);
+
     if (hypot > 30) {
       if (shaking) {
+        console.log(hypot);
         const [a, b, c] = normalize(motion1.x, motion1.y, motion1.z);
         const [d, e, f] = normalize(shaking.x, shaking.y, shaking.z);
         // check if [a,b,c] and [d,e,f] are pointing to the same direction by using dot product
