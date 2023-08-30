@@ -33,7 +33,7 @@ function App() {
       x: 0,
       y: 0,
       z: 0,
-    } | undefined;
+    } || undefined;
 
   useEffect(() => {
     const hypot = Math.hypot(motion1.x, motion1.y, motion1.z);
