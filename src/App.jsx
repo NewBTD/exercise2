@@ -41,11 +41,14 @@ function App() {
     if (hypot > 30) {
       if (shaking) {
         const [a, b, c] = normalize(motion1.x, motion1.y, motion1.z);
-        console.log("motionx " + motion1.x);
-        console.log("motiony " + motion1.y);
-        console.log("motionz " + motion1.z);
         const [d, e, f] = normalize(shaking.x, shaking.y, shaking.z);
         // check if [a,b,c] and [d,e,f] are pointing to the same direction by using dot product
+        console.log("a " + a);
+        console.log("b " + b);
+        console.log("c " + c);
+        console.log("d " + d);
+        console.log("e " + e);
+        console.log("f " + f);
         if (Math.abs(a * d + b * e + c * f) < 0.3) {
           shaking = undefined;
         }
